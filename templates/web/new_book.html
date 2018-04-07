@@ -1,0 +1,7 @@
+{% extends 'layouts/master.html' %} {% block title %}New book{% endblock %} {% block body %}
+<h1>New book</h1>
+<form action="{{ url_for('new_book') }}" method="post">
+	{{ generate_fields(form) }}
+	<input type="submit" class="btn btn-success" value="Add">
+</form>
+{% endblock %}
